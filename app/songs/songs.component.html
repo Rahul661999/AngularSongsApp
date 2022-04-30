@@ -1,0 +1,38 @@
+<!-- <p>songs works!</p> -->
+
+<br>
+<br>
+<div id="container">
+<h4 style="padding-left: 250px;">Songs List</h4>
+<table border="1" class="table table-bordered" style="border: 2px solid black; width: 50%;">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name of Song</th>
+            <th>Name of the Album</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let row of songData">
+            <td style="color: blue;">{{row.id}}</td>
+            <button (click)="press(row.id)" href='Songs/{{ row.songName }}' style="text-decoration: none; padding-left: 66px; padding-right: 50px; color: blue;" ><td>{{row.songName}}</td></button>
+            <!-- <a class="nav-link" routerLink="Songs/{{row.songName}}"><td>{{row.songName}}</td></a> -->
+            <td style="padding-right: 80px;">{{row.albumName}}</td>
+        </tr>
+        
+    </tbody>
+</table>
+
+<br><br>
+<h6><strong>Add New Song</strong></h6>
+<form [formGroup]="formValue">
+<label style="padding-left: 130px;"><strong>Enter Song Name:</strong></label>
+<input type="text" id="song" formControlName="songName">
+<br>
+<label style="padding-left: 85px;"><strong>Enter Album Name:</strong></label>
+<input type="text" id="album" formControlName="albumName">
+<button type="button" (click)="postSongDetails()">Add Song</button>
+</form>
+</div>
+<!-- <app-song1 [data1]="songData.songName"></app-song1> -->

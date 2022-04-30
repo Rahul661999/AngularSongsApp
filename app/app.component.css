@@ -1,0 +1,14 @@
+#container
+{
+    background-color:gainsboro;
+    padding-top: 4px;
+}
+
+#setStyle
+{
+    color:#8a2be2;
+    margin-left: 45%;
+    margin-top: 60px;
+    padding-bottom: 60px;
+    /* background-color:gainsboro; */
+}
